@@ -1,0 +1,90 @@
+.documents-v2 * {
+  box-sizing: border-box;
+}
+.documents-v2 .form-document-request textarea {
+  display: block;
+  padding: 6px;
+  width: 100%;
+  outline: 0;
+  border: 1px solid #D0D0D0;
+  margin: 6px 0;
+}
+.documents-v2 .form-document-request table {
+  width: 100%;
+}
+.documents-v2 .form-document-request table.orders {
+  margin: 6px 0;
+  border-collapse: collapse;
+}
+.documents-v2 .form-document-request table.orders th {
+  padding: 6px;
+  color: #505050;
+}
+.documents-v2 .form-document-request table.orders td {
+  padding: 4px;
+  color: #505050;
+}
+.documents-v2 .form-document-request table.orders tr.orders-list.checked > td {
+  color: #0094D5;
+}
+.documents-v2 .form-document-request table.orders tr.orders-list.checked > td input[type=text] {
+  font-weight: bold;
+  color: #0094D5;
+}
+.documents-v2 .form-document-request table.orders tbody > tr:hover {
+  background-color: #F5F5F5 !important;
+}
+.documents-v2 .form-document-request table.orders tbody > tr > td:first-child {
+  background-color: #F0F0F0 !important;
+}
+.documents-v2 .form-document-request table.orders thead {
+  background-color: #F0F0F0;
+}
+.documents-v2 .form-document-request table.orders td,
+.documents-v2 .form-document-request table.orders th {
+  border: 1px solid #D0D0D0;
+}
+.documents-v2 .form-document-request table.orders tfoot td {
+  font-weight: bold;
+}
+.documents-v2 .form-document-request table.orders tfoot td:first-child {
+  border: 0;
+}
+.documents-v2 .form-document-request table.orders input[type=text] {
+  padding: 6px;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  background-color: transparent;
+  text-align: center;
+  font-weight: normal;
+  color: #808080;
+}
+.documents-v2 .form-document-request table.orders input[type=text]:focus {
+  background-color: rgba(0, 148, 213, 0.1);
+}
+.documents-v2 .form-document-request table.header {
+  border-collapse: collapse;
+}
+.documents-v2 .form-document-request table.header th,
+.documents-v2 .form-document-request table.header td {
+  padding: 4px;
+  font-weight: normal;
+  color: #808080;
+}
+.documents-v2 .form-document-request table.header tr > th {
+  white-space: nowrap;
+  width: 3em;
+  text-align: right;
+}
+.documents-v2 .form-document-request table.header > thead > tr > td > input[type=text],
+.documents-v2 .form-document-request table.header > thead > tr > td > select {
+  display: block;
+  width: 100%;
+  padding: 6px;
+  outline: 0;
+  border: 0;
+  color: #0094D5;
+  font-weight: 500;
+  background-color: rgba(0, 148, 213, 0.1);
+}
