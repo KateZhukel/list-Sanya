@@ -191,7 +191,7 @@
     <div style="padding: 0 4px;">
         <div class="table1" style="width: 100%; margin-top: 8px;">
             <div>
-                <div class="sizing-box" style="min-height: 855px;">
+                <div class="sizing-box">
 
                     <div>
                         <div class="wxTabCtrl theme" id="wx_tab22_1">
@@ -313,6 +313,10 @@
                                                 <div id="filter-toggle" class="filter-btn__toggle">Фильтр
                                                     <img src="img/bot-arr.png" alt="">
                                                 </div>
+                                                <form action="" class="filter-btn__form">
+                                                    <input type="text" name="search" id="search" class="filter-btn__search-input" placeholder="Search">
+                                                    <button class="ui-button filter-btn__search-icon"></button>
+                                                </form>
                                             </div>
                                             <div class="form-wrapper">
                                                 <form action="" method="GET" id="clients-filter-form" style="display: none">
@@ -612,22 +616,25 @@
                                                         <!--</div>-->
 
                                                         <div class="checkbox-list">
+
                                                             <div class="checkbox-list__wrap">
                                                                 <div class="td-el checkbox-list__name">Страна:</div>
                                                                 <div>
                                                                     <div class="checkbox-list__el">
-                                                                        <input type="checkbox" class="countryReal" name="countryReal[]" value="BY">
-                                                                        <label>РБ</label>
+                                                                        <input type="checkbox" class="countryReal checkbox-list__input" name="countryReal[]" value="BY" id="RB">
+                                                                        <label for="RB">РБ</label>
                                                                     </div>
                                                                     <div  class="checkbox-list__el">
-                                                                    <input type="checkbox" class="countryReal" name="countryReal[]" value="RU">
-                                                                        <label>РФ</label>
+                                                                        <input type="checkbox" class="countryReal checkbox-list__input" name="countryReal[]" value="RU" id="RF">
+                                                                        <label for="RF">РФ</label>
                                                                     </div>
                                                                     <div  class="checkbox-list__el">
-                                                                        <input type="checkbox" class="countryReal" name="countryReal[]" value="KZ">
-                                                                        <label>КЗ</label>
+                                                                        <input type="checkbox" class="countryReal checkbox-list__input" name="countryReal[]" value="KZ" id="KZ">
+                                                                        <label for="KZ">КЗ</label>
                                                                     </div>
                                                                 </div>
+                                                            </div>
+
                                                             <!--<td colspan="2">-->
                                                                 <!--<table style="min-height: 61px;">-->
                                                                     <!--<tbody><tr>-->
@@ -636,102 +643,106 @@
                                                                     <!--</tr>-->
                                                                     <!--</tbody></table>-->
                                                             <!--</td>-->
-                                                            </div>
+
                                                             <div class="checkbox-list__wrap">
                                                                 <div class="td-el checkbox-list__name">Способ оплаты:</div>
                                                                 <div class="checkbox-list__el">
-                                                                    <input type="checkbox" name="payType[]" value="1">
-                                                                    <label>Предоплата</label>
+                                                                    <input type="checkbox" name="payType[]" value="1" class="checkbox-list__input" id="prepayment">
+                                                                    <label for="prepayment">Предоплата</label>
                                                                 </div>
                                                                 <div class="checkbox-list__el">
-                                                                    <input type="checkbox" name="payType[]" value="5">
-                                                                    <label>По факту</label>
+                                                                    <input type="checkbox" name="payType[]" value="5" class="checkbox-list__input" id="in-fact">
+                                                                    <label for="in-fact">По факту</label>
                                                                 </div>
                                                                 <div class="checkbox-list__el">
-                                                                    <input type="checkbox" name="payType[]" value="0">
-                                                                    <label>Без оплаты</label>
+                                                                    <input type="checkbox" name="payType[]" value="0" class="checkbox-list__input" id="without-payment">
+                                                                    <label for="without-payment">Без оплаты</label>
                                                                 </div>
                                                             </div>
 
                                                             <div class="checkbox-list__wrap">
                                                                 <div class="td-el checkbox-list__name">Активность:</div>
-                                                                    <div class="checkbox-list__el">
-                                                                        <input type="checkbox" class="clientActivityInput" name="clientActivity[]" value="активный">
-                                                                        <label>Активный</label>
-                                                                    </div>
-                                                                    <!--<div class="checkbox-list__el">-->
-                                                                        <!--<input type="checkbox" class="clientActivityInput" name="clientActivity[]" value="активный+">-->
-                                                                        <!--<label>Активный+</label>-->
-                                                                    <!--</div>-->
-                                                                    <div class="checkbox-list__el">
-                                                                        <input type="checkbox" class="clientActivityInput" name="clientActivity[]" value="снижение активности">
-                                                                        <label>Активный</label>
-                                                                    </div>
-                                                                    <!--</div>-->
-                                                                    <!--<div class="checkbox-list__el">-->
-                                                                       <!--<input type="checkbox" class="clientActivityInput" name="clientActivity[]" value="снижение активности+">-->
-                                                                        <!--<label> Снижение+</label>-->
-                                                                    <!--</div>-->
-                                                                    <div class="checkbox-list__el">
-                                                                        <input type="checkbox" class="clientActivityInput" name="clientActivity[]" value="неактивный">
-                                                                        <label>Неактивный</label>
-                                                                    </div>
+                                                                <div class="checkbox-list__el">
+                                                                    <input type="checkbox" class="clientActivityInput checkbox-list__input" name="clientActivity[]" value="активный" id="active">
+                                                                    <label for="active">Активный</label>
+                                                                </div>
+                                                                <!--<div class="checkbox-list__el">-->
+                                                                    <!--<input type="checkbox" class="clientActivityInput" name="clientActivity[]" value="активный+">-->
+                                                                    <!--<label>Активный+</label>-->
+                                                                <!--</div>-->
+                                                                <!--<div class="checkbox-list__el">-->
+                                                                    <!--<input type="checkbox" class="clientActivityInput" name="clientActivity[]" value="снижение активности">-->
+                                                                    <!--<label>Активный</label>-->
+                                                                <!--</div>-->
+                                                                <!--</div>-->
+                                                                <div class="checkbox-list__el">
+                                                                    <input type="checkbox" class="clientActivityInput checkbox-list__input" name="clientActivity[]" value="снижение активности+" id="decline">
+                                                                    <label for="decline">Снижение</label>
+                                                                </div>
+                                                                <div class="checkbox-list__el">
+                                                                    <input type="checkbox" class="clientActivityInput checkbox-list__input" name="clientActivity[]" value="неактивный" id="inactive">
+                                                                    <label for="inactive">Неактивный</label>
+                                                                </div>
                                                             </div>
 
                                                             <div class="checkbox-list__wrap">
                                                                 <div class="td-el checkbox-list__name">Тип клиента:</div>
                                                                 <div class="checkbox-list__el">
-                                                                    <input type="checkbox" name="clientType[]" value="1">
-                                                                    <label>Клиент</label>
+                                                                    <input type="checkbox" name="clientType[]" value="1" class="checkbox-list__input" id="client">
+                                                                    <label for="client">Клиент</label>
                                                                 </div>
                                                                 <div class="checkbox-list__el">
-                                                                    <input type="checkbox" name="clientType[]" value="2">
-                                                                    <label> Рекламное агентство </label>
+                                                                    <input type="checkbox" name="clientType[]" value="2" class="checkbox-list__input" id="agency">
+                                                                    <label for="agency">Рекламное агентство</label>
                                                                 </div>
                                                                 <div class="checkbox-list__el">
-                                                                    <input type="checkbox" name="clientType[]" value="3">
-                                                                    <label>Фрилансер</label>
+                                                                    <input type="checkbox" name="clientType[]" value="3" class="checkbox-list__input" id="freelancer">
+                                                                    <label for="freelancer">Фрилансер</label>
                                                                 </div>
                                                             </div>
 
                                                             <div class="checkbox-list__wrap">
                                                                 <div class="td-el checkbox-list__name">Бизнес модель:</div>
                                                                 <div class="checkbox-list__el">
-                                                                    <input type="checkbox" name="businessModel[]" value="1">
-                                                                    <label>B2C/Retail/FMCG</label>
+                                                                    <input type="checkbox" name="businessModel[]" value="1" class="checkbox-list__input" id="B2C">
+                                                                    <label for="B2C">B2C/Retail/FMCG</label>
                                                                 </div>
                                                                 <div class="checkbox-list__el">
-                                                                    <input type="checkbox" name="businessModel[]" value="2">
-                                                                    <label>B2B</label>
+                                                                    <input type="checkbox" name="businessModel[]" value="2" class="checkbox-list__input" id="B2B">
+                                                                    <label for="B2B">B2B</label>
                                                                 </div>
                                                                 <div class="checkbox-list__el">
-                                                                    <input type="checkbox" name="businessModel[]" value="3">
-                                                                    <label>Производитель</label>
+                                                                    <input type="checkbox" name="businessModel[]" value="3" class="checkbox-list__input" id="manufacturer">
+                                                                    <label for="manufacturer">Производитель</label>
                                                                 </div>
                                                             </div>
+
                                                             <div class="checkbox-list__wrap">
                                                                 <div class="td-el checkbox-list__name">Вид деятельности:</div>
-                                                                    <div class="checkbox-list__el">
-                                                                        <input type="checkbox" name="activityKind[]" value="1">
-                                                                        <label>Услуги</label>
-                                                                    </div>
-                                                                    <div class="checkbox-list__el">
-                                                                        <input type="checkbox" name="activityKind[]" value="3">
-                                                                        <label>Товары</label>
-                                                                    </div>
+                                                                <div class="checkbox-list__el">
+                                                                    <input type="checkbox" name="activityKind[]" value="1" class="checkbox-list__input" id="services">
+                                                                    <label for="services">Услуги</label>
+                                                                </div>
+                                                                <div class="checkbox-list__el">
+                                                                    <input type="checkbox" name="activityKind[]" value="3" class="checkbox-list__input" id="products">
+                                                                    <label for="products">Товары</label>
+                                                                </div>
                                                             </div>
+
                                                             <div class="checkbox-list__wrap">
                                                                 <div class="td-el checkbox-list__name">Доп. условия:</div>
                                                                 <div class="checkbox-list__el">
-                                                                    <input type="checkbox" name="activityKind[]" value="1">
-                                                                    <label> Док. задолженность</label>
+                                                                    <input type="checkbox" name="activityKind[]" value="1" class="checkbox-list__input" id="debt">
+                                                                    <label for="debt"> Док. задолженность</label>
                                                                 </div>
                                                                 <div class="checkbox-list__el">
-                                                                    <input type="checkbox" name="activityKind[]" value="3">
-                                                                    <label>NDA</label>
+                                                                    <input type="checkbox" name="activityKind[]" value="3" class="checkbox-list__input" id="NDA">
+                                                                    <label for="NDA">NDA</label>
                                                                 </div>
                                                             </div>
+
                                                         </div>
+
                                                         <div class="total">
                                                             <span class="total__el total__el--bold">Итого:</span>
                                                             Kлиентов: <b id="countClients">1</b> |
@@ -739,31 +750,41 @@
                                                         </div>
                                                         <div class="btn-wrapper">
                                                             <button type="submit" class="ui-button-flat resetFilters" name="listFilter" value="1">Сформировать список</button>
-                                                            <button type="reset" class="ui-button-flat resetFilters">Очистить фильтры</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <button type="reset" class="ui-button-flat resetFilters">Очистить фильтры</button>
+                                                            <div class="total">
+                                                                <span class="total__el total__el--bold">Итого:</span>
+                                                                <div>
+                                                                    Kлиентов: <b id="countClients">1</b>
+                                                                </div>
+                                                                <div>
+                                                                    Договоров <b id="countContract">13</b>
+                                                                </div>
+                                                            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                         </div>
-                                                        <tr>
-                                                            <td colspan="4">
-                                                                <input type="checkbox" name="isPackage" value="1"> Пакет&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                <input type="checkbox" name="selfRule" value="1"> СУ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                <input type="checkbox" name="noSelfRule" value="1"> НВ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                <input type="checkbox" name="isNoVat" value="1"> Без НДС&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                <input type="checkbox" name="isNda" value="1"> NDA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                <input type="checkbox" name="isManualFin" value="1"> Ручн. фин.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                <input type="checkbox" name="isDocDebt" value="1"> Док. Задолженность
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="td-el">Сегмент клиента</td>
-                                                            <td colspan="3">
-                                                                <input type="checkbox" name="cPriority[]" value="A"> A
-                                                                <input type="checkbox" name="cPriority[]" value="B"> B
-                                                                <input type="checkbox" name="cPriority[]" value="C"> C
-                                                                <input type="checkbox" name="cPriority[]" value="D"> D
-                                                                <input type="checkbox" name="cPriority[]" value="N"> N
-                                                            </td>
-                                                        </tr>
+                                                        <!--<tr>-->
+                                                            <!--<td colspan="4">-->
+                                                                <!--<input type="checkbox" name="isPackage" value="1"> Пакет&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+                                                                <!--<input type="checkbox" name="selfRule" value="1"> СУ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+                                                                <!--<input type="checkbox" name="noSelfRule" value="1"> НВ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+                                                                <!--<input type="checkbox" name="isNoVat" value="1"> Без НДС&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+                                                                <!--<input type="checkbox" name="isNda" value="1"> NDA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+                                                                <!--<input type="checkbox" name="isManualFin" value="1"> Ручн. фин.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+                                                                <!--<input type="checkbox" name="isDocDebt" value="1"> Док. Задолженность-->
+                                                            <!--</td>-->
+                                                        <!--</tr>-->
+                                                        <!--<tr>-->
+                                                            <!--<td class="td-el">Сегмент клиента</td>-->
+                                                            <!--<td colspan="3">-->
+                                                                <!--<input type="checkbox" name="cPriority[]" value="A"> A-->
+                                                                <!--<input type="checkbox" name="cPriority[]" value="B"> B-->
+                                                                <!--<input type="checkbox" name="cPriority[]" value="C"> C-->
+                                                                <!--<input type="checkbox" name="cPriority[]" value="D"> D-->
+                                                                <!--<input type="checkbox" name="cPriority[]" value="N"> N-->
+                                                            <!--</td>-->
+                                                        <!--</tr>-->
 
-                                                        </tbody></div>
+                                                        <!--</tbody>-->
+                                                    </div>
                                                 </form>
                                             </div>
 

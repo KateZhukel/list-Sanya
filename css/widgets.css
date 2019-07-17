@@ -1489,8 +1489,14 @@ ul.ui-tabs + .ui-tabs-container > section:target,ul.ui-tabs + .ui-tabs-container
     border-radius: 1px;
 }
 .checkbox-list {
-
     padding-left: 25px;
+    display: flex;
+    /*width: 70%;*/
+    justify-content: space-between;
+    max-width: 1045px;
+}
+.checkbox-list__wrap {
+    margin-right: 10px;
 }
 .checkbox-list__name {
     font-family: Roboto;
@@ -1504,9 +1510,6 @@ ul.ui-tabs + .ui-tabs-container > section:target,ul.ui-tabs + .ui-tabs-container
 .checkbox-list {
     display: flex;
 }
-.checkbox-list__wrap {
-    width: 25%;
-}
 .checkbox-list__name {
     color: #828282;
     font-family: Roboto;
@@ -1519,7 +1522,52 @@ ul.ui-tabs + .ui-tabs-container > section:target,ul.ui-tabs + .ui-tabs-container
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 13px;
+    font-size: 14px;
+}
+.checkbox-list__input:checked, .checkbox-list__input:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+.checkbox-list__input:checked + label, .checkbox-list__input:not(:checked) + label{
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+}
+.checkbox-list__input:checked + label:before, .checkbox-list__input:not(:checked) + label:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #E0E0E0;
+    background-color: #ffffff;
+    border-radius: 1px;
+    box-sizing: border-box;
+}
+.checkbox-list__input:checked + label:after, .checkbox-list__input:not(:checked) + label:after {
+    content: "";
+    position: absolute;
+    background: url("/img/Vector.png");
+}
+.checkbox-list__input:checked + label:after, .checkbox-list__input:not(:checked) + label:after {
+    left: 5px;
+    top: 4px;
+    width: 6px;
+    height: 4px;
+    border-radius: 1px;
+    border-left: 3px solid #4F4F4F;
+    border-bottom: 3px solid #4F4F4F;
+    transform: rotate(-45deg);
+}
+.checkbox-list__input:not(:checked) + label:after {
+    opacity: 0;
+}
+.checkbox-list__input:checked + label:after {
+    opacity: 1;
+}
+.checkbox-list__el {
+    margin-bottom: 7px;
 }
 .total__el--bold {
     font-weight: bold;
@@ -1535,6 +1583,7 @@ ul.ui-tabs + .ui-tabs-container > section:target,ul.ui-tabs + .ui-tabs-container
 }
 .btn-wrapper {
     padding-left: 25px;
+    display: flex;
 }
 .btn-wrapper > button {
     min-width: 220px;

@@ -2161,6 +2161,33 @@ input:checked + .slider:before {
 
 
 /*new styles*/
+.filter-btn__form {
+    margin-right: 70px;
+    margin-top: -20px;
+}
+.filter-btn__form {
+    position: relative;
+}
+.filter-btn__search-icon {
+    position: absolute;
+    top: 6px;
+    right: 19px;
+}
+.filter-btn__form > button {
+    border: none;
+    outline: none;
+    background: none;
+}
+.ui-button.filter-btn__search-icon:before {
+    content: '';
+    display: block;
+    background-image: url(../img/Group.png);
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background-size: contain;
+    cursor: pointer;
+}
 #filter-toggle.filter-btn__toggle {
     background-color: transparent;
     border-radius: 0;
@@ -2169,12 +2196,20 @@ input:checked + .slider:before {
     border-left: 1px solid #E0E0E0;
     border-right: 1px solid #E0E0E0;
     display: block;
-    max-width: 165px;
+    width: 165px;
     text-align: center;
     padding: 18px 0;
     position: relative;
     font-size: 18px;
-
+}
+.filter-btn__search-input::placeholder {
+    color: #E0E0E0;
+}
+.filter-btn__search-input {
+    border: 1px solid #E0E0E0 ;
+    width: 225px;
+    height: 30px;
+    padding-left: 8px;
 }
 .filter-btn__toggle > img {
     vertical-align: middle;
@@ -2195,7 +2230,11 @@ input:checked + .slider:before {
 .filter-btn__inner {
     padding: 18px 25px 0px 25px;
     border-bottom: 1px solid #E0E0E0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 .form-wrapper {
     margin-top: 20px;
 

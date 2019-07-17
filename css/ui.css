@@ -226,20 +226,19 @@ div.ui-dialog div.footer
     text-align: right;
 }
 
-.ui-button
-{
-    padding: 6px 8px;
-    font-size: 13px;
-    color: white;
-    outline: 0;
-    border: 0;
-    border-radius: 1px;
-    background-color: #1CA0DA;
-    opacity: 0.7;
-    cursor: pointer;
-    line-height: normal;
-    font-weight: normal;
-    z-index: auto !important;
+.ui-button {
+    /*padding: 6px 8px;*/
+    /*font-size: 13px;*/
+    /*color: white;*/
+    /*outline: 0;*/
+    /*border: 0;*/
+    /*border-radius: 1px;*/
+    /*background-color: #1CA0DA;*/
+    /*opacity: 0.7;*/
+    /*cursor: pointer;*/
+    /*line-height: normal;*/
+    /*font-weight: normal;*/
+    /*z-index: auto !important;*/
 }
 a.ui-button {text-decoration: none; padding: 5px 8px;z-index: auto !important;}
 .ui-button.yellow { background-color: #ff9900}
