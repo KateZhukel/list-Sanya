@@ -372,3 +372,42 @@ tr.dbl-border-top>td,tr.dbl-border-top>th {
 table.ui-table-flat--bg>caption {
     background-color: transparent;
 }
+.total {
+    padding-left: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #4F4F4F;
+    font-size: 13px;
+    font-family: Roboto;
+    letter-spacing: 0.02em;
+}
+.total--right {
+    margin: 0;
+}
+.total__el--right {
+    font-weight: normal;
+    font-size: 18px;
+}
+.btn-wrapper {
+    padding-left: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.btn-wrapper > button {
+    min-width: 220px;
+}
+.btn__create-list, .btn__clear-list {
+    font-size: 18px;
+}
+.btn__create-list {
+    background: #00B9FF;
+    padding: 18px 21px;
+    margin-right: 10px;
+}
+.btn__clear-list {
+    background: none;
+    color: #4F4F4F;
+    border: 1px solid #E0E0E0;
+    padding: 18px 21px;
+}
